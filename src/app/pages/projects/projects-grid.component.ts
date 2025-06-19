@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
-import { UiCardComponent } from '../shared/components/ui-card.component';
 import { CommonModule } from '@angular/common';
+import { UiCardComponent } from '../../shared/components/ui-card.component';
 
 @Component({
   selector: 'app-projects-grid',

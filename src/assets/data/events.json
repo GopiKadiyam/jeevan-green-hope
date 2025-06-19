@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Tree Plantation Drive",
+    "date": "2024-06-05",
+    "description": "A community event to plant 500+ saplings in the local park to celebrate World Environment Day.",
+    "image": "gallery1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Water Awareness Camp",
+    "date": "2024-04-22",
+    "description": "Awareness camp on water conservation and distribution of water filters to 100 families.",
+    "image": "gallery2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Solar Lamp Distribution",
+    "date": "2024-03-15",
+    "description": "Distributed 200 solar lamps to students in rural areas to support their education.",
+    "image": "gallery3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Eco-Friendly Festival",
+    "date": "2023-10-02",
+    "description": "Organized a festival promoting eco-friendly practices and alternatives to single-use plastics.",
+    "image": "gallery4.jpg"
+  }
+] 

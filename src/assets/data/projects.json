@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Clean Village Drive",
+    "description": "A rural cleanliness program in Telangana villages.",
+    "image": "assets/images/project1.jpg"
+  },
+  {
+    "title": "Tree Plantation",
+    "description": "Planting 10,000+ saplings in local communities.",
+    "image": "assets/images/project2.jpg"
+  },
+  {
+    "title": "Women Empowerment",
+    "description": "Skill training for rural women.",
+    "image": "assets/images/project3.jpg"
+  },
+  {
+    "title": "Health Camps",
+    "description": "Free health checkups for villagers.",
+    "image": "assets/images/project4.jpg"
+  }
+] 

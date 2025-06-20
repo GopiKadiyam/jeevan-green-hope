@@ -55,71 +55,71 @@ import { TranslateModule } from '@ngx-translate/core';
 
     
     <section id="about" class="max-w-3xl mx-auto px-8 py-12 text-center animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-4">About Us</h2>
-      <p class="text-lg md:text-xl mb-6">Empowering communities for a greener tomorrow.</p>
-      <p class="text-base md:text-lg text-gray-500 dark:text-gray-300">Our mission is to inspire, educate, and mobilize people to protect the environment and support sustainable development.</p>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">{{ 'TITLE' | translate }}</h2>
+      <p class="text-lg md:text-xl mb-6">{{ 'MISSION' | translate }}</p>
+      <p class="text-base md:text-lg text-gray-500 dark:text-gray-300">{{ 'VISION' | translate }}</p>
     </section>
     <section id="projects" class="max-w-5xl mx-auto px-8 py-12 animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">Projects</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'TITLE' | translate }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="card bg-base-100 shadow-xl rounded-xl p-6 flex-1">
-          <h3 class="text-xl font-semibold mb-2">Tree Plantation</h3>
-          <p class="text-base text-gray-600 dark:text-gray-300">Join our tree plantation drives to make your city greener.</p>
+          <h3 class="text-xl font-semibold mb-2">{{ 'PROJECTS.0.TITLE' | translate }}</h3>
+          <p class="text-base text-gray-600 dark:text-gray-300">{{ 'PROJECTS.0.DESC' | translate }}</p>
         </div>
         <div class="card bg-base-100 shadow-xl rounded-xl p-6 flex-1">
-          <h3 class="text-xl font-semibold mb-2">Clean Water Initiative</h3>
-          <p class="text-base text-gray-600 dark:text-gray-300">Providing access to clean and safe drinking water in rural areas.</p>
+          <h3 class="text-xl font-semibold mb-2">{{ 'PROJECTS.1.TITLE' | translate }}</h3>
+          <p class="text-base text-gray-600 dark:text-gray-300">{{ 'PROJECTS.1.DESC' | translate }}</p>
         </div>
       </div>
     </section>
     <section id="donate" class="max-w-3xl mx-auto px-8 py-12 text-center animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-4">Donate</h2>
-      <p class="text-lg md:text-xl mb-6">Support our mission by making a donation. Every contribution counts!</p>
-      <button class="btn btn-success text-lg px-8 py-3 rounded-xl shadow-lg">Donate Now</button>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">{{ 'TITLE' | translate }}</h2>
+      <p class="text-lg md:text-xl mb-6">{{ 'DESC' | translate }}</p>
+      <button class="btn btn-success text-lg px-8 py-3 rounded-xl shadow-lg">{{ 'DONATE_CTA' | translate }}</button>
     </section>
     <section id="blogs" class="max-w-3xl mx-auto px-8 py-12 text-center animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-4">Blogs</h2>
-      <p class="text-lg md:text-xl mb-6">Read inspiring stories and updates from our community.</p>
-      <a routerLink="/blogs" class="btn btn-outline">View All Blogs</a>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">{{ 'TITLE' | translate }}</h2>
+      <p class="text-lg md:text-xl mb-6">{{ 'DESC' | translate }}</p>
+      <a routerLink="/blogs" class="btn btn-outline">{{ 'VIEW_ALL' | translate }}</a>
     </section>
     <section id="gallery" class="max-w-5xl mx-auto px-8 py-12 animate-fade text-center">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-8">Gallery</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8">{{ 'TITLE' | translate }}</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <img src="assets/images/gallery1.jpg" alt="Gallery image 1" class="rounded-xl h-32 w-full object-cover" />
         <img src="assets/images/gallery2.jpg" alt="Gallery image 2" class="rounded-xl h-32 w-full object-cover" />
         <img src="assets/images/gallery3.jpg" alt="Gallery image 3" class="rounded-xl h-32 w-full object-cover" />
         <img src="assets/images/gallery4.jpg" alt="Gallery image 4" class="rounded-xl h-32 w-full object-cover" />
       </div>
-      <a routerLink="/gallery" class="btn btn-primary">View More</a>
+      <a routerLink="/gallery" class="btn btn-primary">{{ 'VIEW_MORE' | translate }}</a>
     </section>
     <section id="events" class="max-w-3xl mx-auto px-8 py-12 text-center animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-4">Events</h2>
-      <p class="text-lg md:text-xl mb-6">Check out our upcoming and past events.</p>
-      <a routerLink="/events" class="btn btn-outline">View All Events</a>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">{{ 'TITLE' | translate }}</h2>
+      <p class="text-lg md:text-xl mb-6">{{ 'DESC' | translate }}</p>
+      <a routerLink="/events" class="btn btn-outline">{{ 'VIEW_ALL' | translate }}</a>
     </section>
     <section id="help" class="max-w-3xl mx-auto px-8 py-12 text-center animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-4">How to Help</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">{{ 'TITLE' | translate }}</h2>
       <div class="flex flex-col md:flex-row gap-8 justify-center">
         <div class="card bg-base-100 shadow-xl rounded-xl p-6 flex-1">
-          <h3 class="text-xl font-semibold mb-2">Volunteer</h3>
-          <p class="text-base text-gray-600 dark:text-gray-300">Join our team and make a difference in your community.</p>
+          <h3 class="text-xl font-semibold mb-2">{{ 'VOLUNTEER' | translate }}</h3>
+          <p class="text-base text-gray-600 dark:text-gray-300">{{ 'VOLUNTEER_DESC' | translate }}</p>
         </div>
         <div class="card bg-base-100 shadow-xl rounded-xl p-6 flex-1">
-          <h3 class="text-xl font-semibold mb-2">Donate</h3>
-          <p class="text-base text-gray-600 dark:text-gray-300">Support our projects with your generous donations.</p>
+          <h3 class="text-xl font-semibold mb-2">{{ 'DONATE' | translate }}</h3>
+          <p class="text-base text-gray-600 dark:text-gray-300">{{ 'DONATE_DESC' | translate }}</p>
         </div>
         <div class="card bg-base-100 shadow-xl rounded-xl p-6 flex-1">
-          <h3 class="text-xl font-semibold mb-2">Spread Awareness</h3>
-          <p class="text-base text-gray-600 dark:text-gray-300">Help us reach more people by spreading the word.</p>
+          <h3 class="text-xl font-semibold mb-2">{{ 'AWARENESS' | translate }}</h3>
+          <p class="text-base text-gray-600 dark:text-gray-300">{{ 'AWARENESS_DESC' | translate }}</p>
         </div>
       </div>
     </section>
     <section id="contact" class="max-w-3xl mx-auto px-8 py-12 animate-fade text-center">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-8">Contact Us</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8">{{ 'TITLE' | translate }}</h2>
       <div class="text-lg mb-4">
-        <div><span class="font-semibold">Address:</span> 123 Green Hope Lane, Hyderabad, Telangana</div>
-        <div><span class="font-semibold">Phone:</span> +91 98765 43210</div>
-        <div><span class="font-semibold">Email:</span> info&#64;jeevangreenhope.org</div>
+        <div><span class="font-semibold">{{ 'ADDRESS' | translate }}:</span> {{ 'ADDRESS' | translate }}</div>
+        <div><span class="font-semibold">{{ 'PHONE' | translate }}:</span> {{ 'PHONE' | translate }}</div>
+        <div><span class="font-semibold">{{ 'EMAIL' | translate }}:</span> {{ 'EMAIL' | translate }}</div>
       </div>
       <iframe class="rounded-xl shadow-md w-full h-64" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.406123456789!2d78.486671315357!3d17.3850440880801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb977b0e8a7b0d%3A0x7d0b0b0b0b0b0b0b!2sHyderabad!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>

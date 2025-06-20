@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [TranslateModule, CommonModule],
   template: `
     <div class="max-w-5xl mx-auto px-8 py-12 animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'GALLERY.TITLE' | translate }}</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'TITLE' | translate }}</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
         <div *ngFor="let img of images" class="overflow-hidden rounded-xl shadow-md">
           <img [src]="img" alt="Gallery image" class="w-full h-48 object-cover transition-all duration-300 hover:scale-105" />

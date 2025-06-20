@@ -10,7 +10,7 @@ import { UiCardComponent } from '../../shared/components/ui-card.component';
   imports: [TranslateModule, UiCardComponent,CommonModule],
   template: `
     <div class="max-w-5xl mx-auto px-8 py-12 animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'PROJECTS.TITLE' | translate }}</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'TITLE' | translate }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- <ui-card *ngFor="let project of projects"
           [title]="project.title"

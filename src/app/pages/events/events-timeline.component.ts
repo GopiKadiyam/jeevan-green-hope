@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule,TranslateModule],
   template: `
     <div class="max-w-3xl mx-auto px-8 py-12 animate-fade">
-      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'EVENTS.TITLE' | translate }}</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold mb-8 text-center">{{ 'TITLE' | translate }}</h2>
       <ul class="timeline timeline-vertical">
         <li *ngFor="let event of events">
           <div class="timeline-start font-semibold">{{ event.date }}</div>

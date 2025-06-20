@@ -6,15 +6,15 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
 const NAV_LINKS = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Projects', path: '/projects' },
-  { label: 'Donate', path: '/donate' },
-  { label: 'Blogs', path: '/blogs' },
-  { label: 'Gallery', path: '/gallery' },
-  { label: 'Events', path: '/events' },
-  { label: 'Help', path: '/help' },
-  { label: 'Contact', path: '/contact' }
+  { key: 'HOME', path: '/' },
+  { key: 'ABOUT', path: '/about' },
+  { key: 'PROJECT', path: '/projects' },
+  { key: 'DONATE', path: '/donate' },
+  { key: 'BLOGS', path: '/blogs' },
+  { key: 'GALLERY', path: '/gallery' },
+  { key: 'EVENTS', path: '/events' },
+  { key: 'HELP', path: '/help' },
+  { key: 'CONTACT', path: '/contact' }
 ];
 
 @Component({
@@ -33,32 +33,15 @@ const NAV_LINKS = [
       </div>
       <!-- Desktop Nav -->
       <ul class="hidden md:flex gap-4 font-medium items-center">
-        <ng-container *ngFor="let link of navLinks.slice(0, 5)">
+        <ng-container *ngFor="let link of navLinks">
           <li>
             <a [routerLink]="link.path" routerLinkActive="active"
                [ngClass]="isTransparent ? 'text-white font-extrabold' : 'text-black font-extrabold'"
                class="hover:underline">
-              {{ link.label }}
+              {{ link.key | translate }}
             </a>
           </li>
         </ng-container>
-        <li class="relative group">
-          <button class="hover:underline flex items-center"
-            [ngClass]="isTransparent ? 'text-white font-extrabold' : 'text-black font-extrabold'">
-            View More <span class="ml-1">▼</span>
-          </button>
-          <ul class="absolute right-0 mt-2 w-40 bg-base-100 shadow-lg rounded-lg py-2 hidden group-hover:block z-50">
-            <ng-container *ngFor="let link of navLinks.slice(5)">
-              <li>
-                <a [routerLink]="link.path" routerLinkActive="active"
-                   [ngClass]="isTransparent ? 'text-black font-extrabold' : 'text-black font-extrabold'"
-                   class="block px-4 py-2 hover:bg-base-200">
-                  {{ link.label }}
-                </a>
-              </li>
-            </ng-container>
-          </ul>
-        </li>
       </ul>
       <!-- Mobile Nav -->
       <div class="md:hidden dropdown dropdown-end">
@@ -70,7 +53,7 @@ const NAV_LINKS = [
             <li>
               <a [routerLink]="link.path" routerLinkActive="active"
                  [ngClass]="isTransparent ? 'text-black font-extrabold' : 'text-black font-extrabold'">
-                {{ link.label }}
+                {{ link.key | translate }}
               </a>
             </li>
           </ng-container>

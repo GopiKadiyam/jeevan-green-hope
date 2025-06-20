@@ -122,8 +122,6 @@ export class NavbarComponent {
 
   onLanguageChange(lang: string) {
     this.language.setLanguage(lang);
-    if ((window as any).ng && (window as any).ng.coreTokens && (window as any).ng.coreTokens.TranslateService) {
-      (window as any).ng.coreTokens.TranslateService.use(lang);
-    }
+    window.location.reload();
   }
 } 

@@ -1,0 +1,13 @@
+{
+  "TITLE": "Our Projects",
+  "PROJECTS": [
+    {
+      "TITLE": "Tree Plantation",
+      "DESC": "Join our tree plantation drives to make your city greener."
+    },
+    {
+      "TITLE": "Clean Water Initiative",
+      "DESC": "Providing access to clean and safe drinking water in rural areas."
+    }
+  ]
+}  

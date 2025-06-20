@@ -1,25 +1,27 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../layout/footer.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     FooterComponent,
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   template: `
     <section id="hero" class="relative min-h-[80vh] flex flex-col items-center justify-center bg-cover bg-center px-4 md:px-8 py-20 text-center" style="background-image: url('assets/images/hero-bg.jpg');">
       <div class="absolute inset-0 bg-black bg-opacity-60"></div>
       <div class="relative z-10 flex flex-col items-center justify-center w-full">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg leading-tight">Doing Nothing is Not An Option of Our Life</h1>
-        <p class="text-lg md:text-2xl text-white mb-8 max-w-2xl mx-auto">Join Jeevan Green Hope Society Trust in empowering communities, supporting children, and building a greener tomorrow.</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg leading-tight">{{ 'TAGLINE' | translate }}</h1>
+        <p class="text-lg md:text-2xl text-white mb-8 max-w-2xl mx-auto">{{ 'SUBTITLE' | translate }}</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <a routerLink="/donate" class="btn btn-primary text-lg px-8 py-3 rounded-xl shadow-lg">Donate Now</a>
+          <a routerLink="/donate" class="btn btn-primary text-lg px-8 py-3 rounded-xl shadow-lg">{{ 'DONATE_CTA' | translate }}</a>
           <button (click)="showVideo = true" class="btn btn-outline text-lg px-8 py-3 rounded-xl shadow-lg flex items-center gap-2">
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Watch Video
+            {{ 'WATCH_VIDEO' | translate }}
           </button>
         </div>
 
@@ -27,15 +29,15 @@ import { CommonModule } from '@angular/common';
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white">
             <div class="bg-yellow-400 bg-opacity-90 rounded-xl p-4">
               <div class="text-2xl font-bold">190+</div>
-              <div class="text-sm">Countries Impacted</div>
+              <div class="text-sm">{{ 'IMPACT_COUNTRIES' | translate }}</div>
             </div>
             <div class="bg-yellow-400 bg-opacity-90 rounded-xl p-4">
               <div class="text-2xl font-bold">10,000+</div>
-              <div class="text-sm">Children Helped</div>
+              <div class="text-sm">{{ 'IMPACT_CHILDREN' | translate }}</div>
             </div>
             <div class="bg-yellow-400 bg-opacity-90 rounded-xl p-4">
               <div class="text-2xl font-bold">50+</div>
-              <div class="text-sm">Active Projects</div>
+              <div class="text-sm">{{ 'IMPACT_PROJECTS' | translate }}</div>
             </div>
           </div>
         </div>

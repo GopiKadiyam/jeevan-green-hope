@@ -1,13 +1,32 @@
 import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpBackend } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 
 import { routes } from './app.routes';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+// Factory for multi-file loader WITHOUT injecting the lang into the prefix
+export function HttpLoaderFactory(handler: HttpBackend) {
+  return new MultiTranslateHttpLoader(handler, [
+    { prefix: `/assets/i18n/`, suffix: `/navbar.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/hero.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/about.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/projects.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/donate.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/blogs.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/gallery.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/events.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/help.json` },
+    { prefix: `/assets/i18n/`, suffix: `/home/contact.json` },
+    { prefix: `/assets/i18n/`, suffix: `/about.json` },
+    { prefix: `/assets/i18n/`, suffix: `/projects.json` },
+    { prefix: `/assets/i18n/`, suffix: `/donate.json` },
+    { prefix: `/assets/i18n/`, suffix: `/blogs.json` },
+    { prefix: `/assets/i18n/`, suffix: `/gallery.json` },
+    { prefix: `/assets/i18n/`, suffix: `/events.json` },
+    { prefix: `/assets/i18n/`, suffix: `/help.json` }
+  ]);
 }
 
 export const appConfig: ApplicationConfig = {
@@ -20,16 +39,17 @@ export const appConfig: ApplicationConfig = {
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        },
-        defaultLanguage: 'en'
+          deps: [HttpBackend]
+        }
       })
     ),
     {
       provide: 'APP_INITIALIZER',
       useFactory: (translate: TranslateService) => () => {
         const browserLang = translate.getBrowserLang() || 'en';
-        translate.use(browserLang.match(/en|hi|te/) ? browserLang : 'en');
+        const lang = browserLang.match(/en|hi|te/) ? browserLang : 'en';
+        localStorage.setItem('lang', lang);
+        return translate.use(lang).toPromise();
       },
       deps: [TranslateService],
       multi: true
